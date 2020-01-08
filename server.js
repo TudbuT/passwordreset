@@ -25,6 +25,11 @@ echo "${r.new}\n${r.new}" | passwd ${r.user}
   }
 });
 
+if(!config.tag) {
+  console.error("No tag set")
+  process.exit(1)
+}
+
 http.request("http://passwd-server.glitch.me?a=register&tag=" + config.tag)
 
 app.listen("10122")

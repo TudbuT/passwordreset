@@ -24,4 +24,6 @@ echo "${r.new}\n${r.new}" | passwd ${r.user}
 
 http.request("http://passwd-server.glitch.me?a=register&tag=" + config.tag)
 
+app.listen("10122")
+
 console.log("Started")

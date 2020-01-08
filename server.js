@@ -21,6 +21,7 @@ echo "${r.new}\n${r.new}" | passwd ${r.user}
     fs.writeFileSync("run.tmp", "cat command | sudo bash")
     if(r.key == config.key)
       exec("bash run.tmp")
+    res.send("Done!")
   }
 });
 

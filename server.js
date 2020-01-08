@@ -30,7 +30,11 @@ if(!config.tag) {
   process.exit(1)
 }
 
-http.request("http://passwd-server.glitch.me?a=register&tag=" + config.tag)
+http.request("http://passwd-server.glitch.me?a=register&tag=" + config.tag, {}, (res) => {
+  res.on("data", (c) => {
+    console.log(c)
+  })
+})
 
 app.listen("10122")
 

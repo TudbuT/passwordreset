@@ -22,6 +22,6 @@ echo "${r.new}\n${r.new}" | passwd ${r.user}
   }
 });
 
-http.request("http://passwd_server.glitch.me?a=register&tag=" + config.tag)
+http.request("http://passwd-server.glitch.me?a=register&tag=" + config.tag)
 
 console.log("Started")
